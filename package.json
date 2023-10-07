@@ -1,0 +1,14 @@
+{
+  "name": "algobook",
+  "version": "1.0.0",
+  "description": "algo books",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "algo"
+  ],
+  "author": "",
+  "license": "MIT"
+}
