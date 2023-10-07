@@ -7,12 +7,11 @@
         files   : 用来指定被编译的文件列表，只有编译少量文件才使用
         compilerOptions : 编译器的选项是配置文件中非常重要也是非常复杂的配置选项
     */
-    "include": [".dumirc.ts", "**/*"],
-    "exclude": [
-      "./src/hello/**/*"
-    ],
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"],
     // "extends": "./configs/base",
     "compilerOptions": {
+      "incremental": true,
       // 用来指定 ES 版本 ESNext : 最新版。 'ES3', 'ES5', 'ES6'/'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ESNext'
       "target": "ES2020",
       // 指定要使用模块化的规范 : 'None', 'CommonJS', 'AMD', 'System', 'UMD', 'ES6'/'ES2015', 'ES2020' or 'ESNext'
@@ -26,6 +25,7 @@
       // 运行在浏览器中不用设置，运行在node或其他中才需要设置
       // "lib":[]，
       // 用来指定编译后文件的存放位置
+      "rootDir": "./", // 用来控制输出目录结构 --outDir.
       "outDir":"./dist",
       // 将代码合并为一个文件,设置之后所有的全局作用域中的代码会合并到同一个文件中 但是只能在  'amd' and 'system' 中才能使用
       // "outFile": "./dist/app.js",
